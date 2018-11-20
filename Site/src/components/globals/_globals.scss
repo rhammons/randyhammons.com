@@ -1,0 +1,60 @@
+.rh {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+::-moz-selection {
+    background: #ff005e;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ff005e;
+    text-shadow: none;
+}
+
+a,
+a:link,
+a:visited {
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+a:after,
+a:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: .125rem;
+    right: .125rem;
+    bottom: -.25rem;
+    height: 2px;
+    background: black;
+    transition: all ease-in .375s;
+}
+
+a:after {
+    width: 0;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: white;
+}
+
+a:hover:after,
+a:active:after,
+a:focus:after {
+    width: 100%;
+    background: #ff005e;
+}

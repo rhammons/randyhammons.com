@@ -1,0 +1,30 @@
+@import 'colors';
+@import 'vars';
+@import 'mixins';
+@import 'typography';
+@import 'import-once';
+@mixin css-body {
+    body {
+        @include font-family;
+        color: $text-01;
+        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        margin: 0;
+        border: 1rem solid black;
+        box-sizing: border-box;
+    }
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+}
+
+@include exports('css--body') {
+    @if global-variable-exists('css--body')==false or $css--body==true {
+        @include css-body;
+    }
+}

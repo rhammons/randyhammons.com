@@ -1,0 +1,150 @@
+@import 'colors';
+@import 'vars';
+@import 'mixins';
+@import 'layout';
+@import 'typography';
+@import 'import-once';
+@mixin typography {
+    .#{$prefix}--type-legal {
+        @include typescale('body2');
+        @include line-height('body');
+        font-weight: 400;
+    }
+    .#{$prefix}--type-caps {
+        text-transform: uppercase;
+    }
+    strong,
+    .#{$prefix}--type-strong {
+        font-weight: 700;
+    }
+    p,
+    .#{$prefix}--type-body1 {
+        margin: 0 0 1rem;
+        @include typescale('body1');
+        @include line-height('body');
+        font-weight: 400;
+    }
+    em {
+        font-style: italic;
+    }
+    a {
+        color: $brand-01;
+    }
+    .#{$prefix}--type-body2 {
+        @include typescale('body2');
+        @include line-height('body');
+        font-weight: 400;
+    }
+    .#{$prefix}--type-subtitle1 {
+        margin-top: 0;
+        @include typescale('subtitle1');
+        @include line-height('body');
+        font-weight: 400;
+    }
+    .#{$prefix}--type-subtitle2 {
+        margin-top: 0;
+        @include typescale('subtitle2');
+        @include line-height('body');
+        font-weight: 400;
+    }
+    .#{$prefix}--type-caption {
+        @include typescale('caption');
+        @include line-height('body');
+        font-weight: 400;
+    }
+    .#{$prefix}--type-button {
+        margin: 0;
+        @include typescale('button');
+        @include line-height('heading');
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    .#{$prefix}--type-overline {
+        margin-bottom: 0;
+        @include font-family-headings;
+        @include typescale('overline');
+        @include line-height('heading');
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+    }
+    .#{$prefix}--type-overline+* {
+        margin: 0;
+    }
+    h1,
+    .#{$prefix}--type-h1 {
+        margin-bottom: 0;
+        @include font-family-headings;
+        @include typescale('h1-m');
+        @include line-height('heading');
+        letter-spacing: -1.5px;
+        font-weight: 600;
+        @include breakpoint(bp--md) {
+            @include typescale('h1');
+        }
+    }
+    h2,
+    .#{$prefix}--type-h2 {
+        margin: 1rem 0;
+        @include font-family-headings;
+        @include typescale('h2-m');
+        @include line-height('heading');
+        font-weight: 200;
+        @include breakpoint(bp--md) {
+            @include typescale('h2');
+        }
+    }
+    h3,
+    .#{$prefix}--type-h3 {
+        margin: 1rem 0;
+        @include font-family-headings;
+        @include typescale('h3-m');
+        @include line-height('heading');
+        font-weight: 400;
+        @include breakpoint(bp--md) {
+            @include typescale('h3');
+        }
+    }
+    h4,
+    .#{$prefix}--type-h4 {
+        margin-bottom: 0;
+        @include font-family-headings;
+        @include typescale('h4-m');
+        @include line-height('heading');
+        letter-spacing: .25px;
+        font-weight: 500;
+        text-transform: uppercase;
+        @include breakpoint(bp--md) {
+            @include typescale('h4');
+        }
+    }
+    h5,
+    .#{$prefix}--type-h5 {
+        margin-bottom: 0;
+        @include font-family-headings;
+        @include typescale('h5');
+        @include line-height('body');
+        letter-spacing: .15px;
+        font-weight: 500;
+        @include breakpoint(bp--sm) {
+            @include typescale('h5');
+        }
+    }
+    h6,
+    .#{$prefix}--type-h6 {
+        margin-bottom: 0;
+        @include font-family-headings;
+        @include typescale('body1');
+        @include line-height('body');
+        font-weight: 500;
+        @include breakpoint(bp--sm) {
+            @include typescale('h6');
+        }
+    }
+}
+
+@include exports('css--typography') {
+    @if global-variable-exists('css--typography')==false or $css--typography==true {
+        @include typography;
+    }
+}

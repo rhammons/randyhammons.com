@@ -1,0 +1,16 @@
+$font-path: '//fonts.googleapis.com/css?family=' !default;
+@import 'import-once';
+@mixin roboto {
+    @import url('#{$font-path}Roboto:300,300i');
+}
+
+@mixin dosis {
+    @import url('#{$font-path}Dosis:400,500,800');
+}
+
+@include exports('css--font-face') {
+    @if not global-variable-exists('css--font-face') or $css--font-face==true {
+        @include roboto;
+        @include dosis;
+    }
+}

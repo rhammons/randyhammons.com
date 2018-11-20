@@ -1,0 +1,22 @@
+@import 'import-once';
+@mixin greeting {
+    /* 
+ __  __     ______     __         __         ______    
+/\ \_\ \   /\  ___\   /\ \       /\ \       /\  __ \   
+\ \  __ \  \ \  __\   \ \ \____  \ \ \____  \ \ \/\ \  
+ \ \_\ \_\  \ \_____\  \ \_____\  \ \_____\  \ \_____\ 
+  \/_/\/_/   \/_____/   \/_____/   \/_____/   \/_____/ 
+													   
+  Pardon the dust! I hope you don't mind, but I don't get a lot of 
+  time to spend working on my own projects, so I hope this single-pager 
+  is enough to start our conversation!
+
+  Please, shoot me a message @ randy@randyhammons.com, 
+  I'd love to chat about collaborating on fun and exciting work!
+
+*/
+}
+
+@include exports('css--font-face') {
+    @include greeting;
+}
