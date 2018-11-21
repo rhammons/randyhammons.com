@@ -14,12 +14,12 @@
         min-height: 100vh;
         margin: 0;
         border: 1rem solid black;
-        box-sizing: border-box;
     }
+    
     *,
-    *:before,
-    *:after {
-        box-sizing: inherit;
+    *:after,
+    *:before {
+        @include box-sizing(border-box);
     }
 }
 

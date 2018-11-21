@@ -1,5 +1,5 @@
-﻿require('normalize.css');
-
+﻿require('./globals/scss/boilerplate.css');
+require('normalize.css');
 require('./globals/scss/styles.scss');
 
 // ====================//

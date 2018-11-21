@@ -1,0 +1,11 @@
+/* TEAM */
+	Creator: Randy Hammons
+	Contact: randy [at] randyhammons.com
+	Twitter: @optikinescant 
+	From:Cleveland, Ohio, United States of America	
+
+/* SITE */
+	Last update:2018/11/21
+	Language: English
+	Doctype:HTML5
+	IDE: Visual Studio Code

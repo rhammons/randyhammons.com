@@ -1,7 +1,6 @@
 //-------------------------
 // 🌍 Global
 //-------------------------
-$css--boilerplate: true !default;
 $css--font-face: true !default;
 $css--helpers: true !default;
 $css--body: true !default;
@@ -10,7 +9,6 @@ $css--use-experimental-grid-fallback: false !default;
 $css--use-layer: true !default;
 $css--typography: true !default;
 $css--plex: true !default;
-@import 'boilerplate';
 @import 'colors';
 @import 'vars';
 @import 'mixins';
